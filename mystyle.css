@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Cảnh biển */
+#content {
+    width: 100%;
+    height: 100vh;
+    background-image: url("images/background1.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+/* Nút điều khiển */
+#controls {
+    position: absolute;
+    z-index: 10;
+    right: 20px;
+    top: 20px;
+}
+#controls button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+
+/* ------------------- CÁ MẬP ------------------- */
+#shark {
+    position: absolute;
+    left: 100px; 
+    top: 400px;
+    animation: shark 10s linear infinite;
+}
+@keyframes shark {
+    0% {left: 100px; top: 400px;}
+    20% {left: 300px; top: 400px;}
+    40% {left: 500px; top: 300px;}
+    50% {left: 700px; top: 200px;}
+    70% {left: 900px; top: 300px;}
+    100% {left: 100px; top: 400px; transform: scaleX(-1);}
+}
+
+/* ------------------- RÙA ------------------- */
+#turtle {
+    position: absolute;
+    left: 50px; 
+    top: 150px;
+    animation: turtle 15s linear infinite;
+}
+@keyframes turtle {
+    0% {left: 50px;}
+    50% {left: 900px;}
+    100% {left: 50px;}
+}
+
+#goldfish {
+    position: absolute; 
+    animation: goldfish-move 10s linear infinite; 
+}
+@keyframes goldfish-move { 
+    0% { left: -300px; }
+    100% { left: 1300px; }
+}
+
+#faintfish {
+    position: absolute; 
+    animation: faintfish-move 15s linear infinite; 
+}
+@keyframes faintfish-move { 
+    0% { left: 1300px; }
+    100% { left: -300px; }
+}
+
+
+/* ------------------- THỢ LẶN ------------------- */
+#diver1, #diver2, #diver3 {
+    position: absolute;
+    animation: Diver 10s ease-in-out infinite;
+}
+#diver1 { left: 200px; top: 50px; animation-duration: 9s;}
+#diver2 { left: 400px; top: 20px; animation-duration: 11s;}
+#diver3 { left: 600px; top: 80px; animation-duration: 13s;}
+
+@keyframes Diver {
+    0% {top: 20px;}
+    50% {top: 500px;}
+    100% {top: 20px;}
+}
